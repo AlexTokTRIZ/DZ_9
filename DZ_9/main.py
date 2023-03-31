@@ -2,6 +2,14 @@ import random
 from loto_classes import Loto_card
 from Loto_func import*
 
+
+def print_card(card):
+    print('-' * 15)
+    for j in range(3):
+        for i in range(5):
+            print(card[i + j * 5], end=' ')
+        print('\n', '-' * 15)
+
 # начало
 #variant=int(input('Выберите вариант игры: (1 - чел./комп.), 2 - чел./чел., 3 - комп/комп'))
 #variant=variant if variant>=2 and variant <=3 else 1
@@ -11,8 +19,7 @@ card_k.init_card()
 # печать карточки
 card_m=Loto_card()
 card_m.init_card()
-print_card(card_k.card)
-print_card(card_m.card)
+
 # игра!
 sumka=[str(i) for i in range(1,91)]
 otval=[]
