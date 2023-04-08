@@ -3,7 +3,7 @@ from random import randint
 class Loto_card:
 
     def __init__(self):
-       self.card=[]
+        self.card=[]
 
     def init_card(self):
         self.card=[]
@@ -15,10 +15,11 @@ class Loto_card:
         self.card.sort()
         self.card=list(map(lambda x: str(x), self.card))
         #return self.card
+
     def replace_num(self, num):
- #       self.card.replace(num,'--')
         for i in range(len(self.card)):
             self.card[i] = self.card[i] if self.card[i]!=num else "--"
+        return self.card
 
 
 if __name__ == '__main__':
