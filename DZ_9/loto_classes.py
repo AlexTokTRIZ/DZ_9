@@ -5,6 +5,9 @@ class Loto_card:
     def __init__(self):
         self.card=[]
 
+    def __str__(self):
+        return f'{self.card} кол-во элементов в карточке: {len(self)}'
+
     def init_card(self):
         self.card=[]
         while len(self.card)<15:
